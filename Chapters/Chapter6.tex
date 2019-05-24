@@ -1,0 +1,27 @@
+% Chapter 6 
+
+\chapter{Conclusion} % Main chapter title
+
+\label{Chapter6} % For referencing the chapter elsewhere, use \ref{Chapter6} 
+
+\lhead{Chapter 6. \emph{ Conclusion }} % This is for the header on each page - perhaps a shortened title
+
+%--------------------------------------------------------------------------------
+  
+  In this study, using MR images of the brain, we segmented brain tissues into normal tissues such as white matter, gray matter, cerebrospinal fluid (background), and tumor-infected tissues.. We used preprocessing to improve the signal-to-noise ratio and to eliminate the effect of unwanted noise. We used a skull stripping algorithm based on threshold technique to improve the skull stripping performance. Furthermore, we used U-Net architecture with Fully Convolutional Neural Networks to classify the tumor stage by analyzing feature vectors and area of the tumor. In this study, we investigated texture based and histogram based features with a commonly recognized classifier for the classification of brain tumor from MR brain images.
+  
+  From the experimental results performed on the different images, it is clear that the analysis for the brain tumor detection is fast and accurate when compared with the manual detection performed by radiologists or clinical experts. The various performance factors also indicate that the proposed algorithm provides better result by improving certain parameters such as mean, MSE, PSNR, accuracy, sensitivity, specificity, and dice coefficient. Our experimental results show that the proposed approach can aid in the accurate and timely detection of brain tumor along with the identification of its exact location. Thus, the proposed approach is significant for brain tumor detection from MR images.
+    Dataset consist of 220 3d images of tumor and non-tumor.
+    In this study, a model has been proposed for the efficient tumor detection of brain MR images. Following steps are adopted for detection:
+    \begin{enumerate}
+        \item Step 1: Taking input image.
+        \item Step 2: Filter image.
+        \item Step 3: Segmentation of MR image by gray scaled technique.
+        \item Step 4: Then apply classification technique of deep neural network to detect the tumor from brain MR images. Accuracy of the classification is 99\%.
+        \item Step 5: Last task is to compute the area of the detected image by using algorithm.
+    \end{enumerate}
+    
+    
+    
+   
+    

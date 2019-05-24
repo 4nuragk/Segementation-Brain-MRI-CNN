@@ -1,0 +1,433 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Oliver Lemon made minor edits (jan 2015)  to : 
+% Masters/Doctoral Thesis 
+% LaTeX Template
+% Version 1.43 (17/5/14)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original authors:
+% Steven Gunn 
+% http://users.ecs.soton.ac.uk/srg/softwaretools/document/templates/
+% and
+% Sunil Patel
+% http://www.sunilpatel.co.uk/thesis-template/
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Note:
+% Make sure to edit document variables in the Thesis.cls file
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[10pt, oneside]{Thesis} % The default font size and one-sided printing (no margin offsets)
+
+\graphicspath{{Pictures/}} % Specifies the directory where pictures are stored
+\usepackage{ragged2e}
+\usepackage[square,numbers]{natbib}
+\bibliographystyle{unsrtnat}
+\hypersetup{urlcolor=blue, colorlinks=true} % Colors hyperlinks in blue - change to black if annoying
+
+
+\title{HWU CS Masters thesis template} % BUT you should use use " \title{\ttitle} " here instead to define the thesis title ! 
+% \ttitle is defined in the file Thesis.cls 
+
+\begin{document}
+
+\frontmatter % Use roman page numbering style (i, ii, iii, iv...) for the pre-content pages
+
+\setstretch{1.3} % Line spacing of 1.3
+
+% Define the page headers using the FancyHdr package and set up for one-sided printing
+\fancyhead{} % Clears all page headers and footers
+\rhead{\thepage} % Sets the right side header to show the page number
+\lhead{} % Clears the left side page header
+
+\pagestyle{fancy} % Finally, use the "fancy" page style to implement the FancyHdr headers
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % New command to make the lines in the title page
+
+% PDF meta-data
+\hypersetup{pdftitle={\ttitle}}
+\hypersetup{pdfsubject=\subjectname}
+\hypersetup{pdfauthor=\authornames}
+\hypersetup{pdfkeywords=\keywordnames}
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\begin{titlepage}
+\begin{center}
+{\scshape\LARGE ASSAM UNIVERSITY \par}\vspace{1.5cm}
+
+\HRule \\[0.4cm] % Horizontal line
+{\huge \textbf{Segmentation and Classification of Brain Tumor in MRI Images}}\\[0.3cm] % Thesis title
+\HRule \\[1.5cm] % Horizontal line
+
+\large \textit{A report submitted in partial fulfilment of the requirements for the degree of \\ \textbf{ Bachelor of Technology}}\\[0.3cm] % University requirement text
+\textit{in }\\ \textbf{Computer Science and Engineering}
+%\groupname\\
+
+
+ 
+\begin{minipage}[t]{0.8\textwidth}
+\begin{center}
+  \textbf{Submitted By:}\\
+  \begin{flushleft}
+  K.A. Moriom Sultana \hspace{3.0cm} 42-160081208 of 2016-17\\
+  Anurag Kushawaha \hspace{3.4cm} 42-150068213 of 2015-16\\
+  Rakesh Das \hspace{4.8cm} 42-150068224 of 2015-16\\ % Author name - remove the \href bracket to remove the link 
+ \end{flushleft}
+\end{center} \large
+
+
+\end{minipage}
+\\[0.8cm]
+\begin{minipage}[t]{0.8\textwidth}
+\begin{center} \large
+\textbf{Under the guidance of:} \\
+{Dr. Sudipta Roy}\\Professor\\Department of Computer Science and Engineering\\Dean\\Triguna Sen School of Technology
+%\\
+%Dean, Department of Computer Science and Engineering
+ %\\ Supervisor name - remove the \href bracket to remove the link  
+\end{center}
+\end{minipage}\\[1cm]
+ {
+\includegraphics[width=3cm]{Logo.png} \\% University/department logo - uncomment to place it
+Triguna Sen School of Tehnology\\ 
+Department of Computer Science and Engineering\\ % Research group name and department name
+Assam University, Silchar 788011 \\
+\large 27th May, 2019}\\[1cm] % Date
+\end{center}
+
+\end{titlepage}
+
+%----------------------------------------------------------------------------------------
+%	DECLARATION PAGE
+%	Your institution may give you a different text to place here
+%----------------------------------------------------------------------------------------
+\begin{center}
+    \includegraphics[width=4cm]{Logo.png} % University/department logo - uncomment to place it
+ 
+
+\end{center}
+\Declaration{
+
+\addtocontents{toc}{\vspace{1em}} % Add a gap in the Contents, for aesthetics
+
+
+
+ We, the undersigned, declare that this report titled, '\Brain Tumor Detection Using MRI Images' and the work presented in this report is our own. We confirm that this work submitted for assessment is our own and is expressed in our own words. Any uses made within it of the works of  other authors in any form (e.g., ideas, equations, figures, text,  tables, programs) are properly acknowledged at any point of their  use . To the best of our knowledge and belief, the same report has not been submitted either by us or by any other person for the award of any other degree or diploma of the university or other
+institute of higher learning.
+
+%\begin{itemize} 
+%\item[\tiny{$\blacksquare$}] This work was done wholly or mainly while in candidature for a research degree at this University.
+%\item[\tiny{$\blacksquare$}] Where any part of this thesis has previously been submitted for a degree or any other qualification at %this University or any other institution, this has been clearly stated.
+%\item[\tiny{$\blacksquare$}] Where I have consulted the published work of others, this is always clearly attributed.
+%\item[\tiny{$\blacksquare$}] Where I have quoted from the work of others, the source is always given. With the exception of such %quotations, this thesis is entirely my own work.
+%\item[\tiny{$\blacksquare$}] I have acknowledged all main sources of help.
+%\item[\tiny{$\blacksquare$}] Where the thesis is based on work done by myself jointly with others, I have made clear exactly what %was done by others and what I have contributed myself.\\
+%\end{itemize}
+ \vspace{2cm} 
+K A Moriom Sultana (31420095)\\%(Name,Roll No and Signature)\\
+\rule[1em]{40em}{0.5pt}\\ % This prints a line for the signature
+Anurag Kushawaha (31420013) \\
+\rule[1em]{40em}{0.5pt}\\
+Rakesh Das (31420024)\\
+\rule[1em]{40em}{0.5pt}\\
+Date: 27th May 2019\\
+\rule[1em]{20em}{0.5pt}\\ % This prints a line to write the date
+Place: Silchar,Assam\\
+\rule[1em]{20em}{0.5pt}\\
+}
+
+\clearpage % Start a new page
+
+%-------------------------------------------------------------------------------
+
+%-------------------------------------------------------------------------------
+% CERTIFICATE PAGE
+%
+% Use the \Certificate command to print the Certificate in the document
+%-------------------------------------------------------------------------------
+
+\begin{center}
+\includegraphics[width=3cm]{Logo.png}\\ % University/department logo - uncomment to place it
+Department of Computer Science and Engineering \\
+Assam University, Silchar-788003\\
+\Certificate{
+This is to certify that the report entitled \\ \textit{\Brain Tumor Detection Using MRI Images} \\ and submitted by \\ \textit{\textbf{\ K A Moriom Sultana\\Anurag Kushawaha\\Rakesh Das}} \\ to the Department of Computer Science and Engineering, Assam University, Silchar in partial fulfilment of the requirements for the the award of the Degree of\\ \textbf{Bachelor of Technology} \\ in \\ \textbf{Computer Science and Engineering} \\ is a bonafide record of the work carried out by them under my supervision.It is further certified that the candidates has  complied with all the formalities as per the requirements of \\Assam University.\\ \vspace{2cm}
+
+
+
+\begin{flushleft}
+ \rule[1em]{30em}{0.5pt}\\  \textbf{Dr.Sudipta Roy(Dean)}  \\ \vspace{1cm}
+ \rule[1em]{30em}{0.5pt}\\ \textbf{Dr. Sunita Sarkar (Head of the Department)}  \\ \vspace{1cm}
+\rule[1em]{30em}{0.5pt}\\ \textbf{External Examiner's Name \& Signature}  \\
+\begin{flushright}
+Date and Seal
+\end{flushright}
+\end{flushleft} \large
+
+
+
+
+
+
+
+
+}
+\end{center}
+\clearpage
+
+
+
+
+
+
+
+
+%----------------------------------------------------------------------------------------
+%	QUOTATION PAGE
+%----------------------------------------------------------------------------------------
+
+% \pagestyle{empty} % No headers or footers for the following pages
+
+% \null\vfill % Add some space to move the quote down the page a bit
+
+% \textit{``You have to dream before your dreams come true."}
+
+% \begin{flushright}
+% Dr. A.P.J. Abdul Kalam
+% \end{flushright}
+
+% \vfill\vfill\vfill\vfill\vfill\vfill\null % Add some space at the bottom to position the quote just right
+
+% \clearpage % Start a new page
+
+%----------------------------------------------------------------------------------------
+%	ABSTRACT PAGE
+%----------------------------------------------------------------------------------------
+
+\addtotoc{Abstract} % Add the "Abstract" page entry to the Contents
+
+%\abstract{\addtocontents{toc}{\vspace{1em}} % Add a gap in the Contents, for aesthetics
+
+ {\huge{\textit{Abstract}} \par}{\addtocontents{toc}{\vspace{1em}} 
+
+Today’s recent medical imaging research faces the challenge of detecting brain tumor through Magnetic Resonance Images (MRI). Broadly, to produce images of soft tissue of human body, MRI images are used by experts. For brain tumor detection, image segmentation is required. Mechanizing this process is a tricky task because of the high diversity in the appearance of tumor tissues among different patients and in many cases similarity with the usual tissues.Physical segmentation of medical image by the radiologist is a monotonous and prolonged process. MRI is a highly developed medical imaging method providing rich information about the person soft-tissue structure. There are varied brain tumor recognition and segmentation methods to detect and segment a brain tumor from MRI images. This is well thought-out to be one of the most significant but tricky part of the process of detecting brain tumor. A variety of algorithms were developed for segmentation of MRI images by using different tools and methods. Alternatively this paper presents a comprehensive review of the methods and techniques used to detect brain tumor through MRI image.  
+%The page is kept centered vertically so can expand into the blank space above the title too\ldots
+%
+
+\clearpage % Start a new page
+
+%----------------------------------------------------------------------------------------
+%	ACKNOWLEDGEMENTS
+%----------------------------------------------------------------------------------------
+
+\setstretch{1.3} % Reset the line-spacing to 1.3 for body text (if it has changed)
+
+\acknowledgements{\addtocontents{toc}{\vspace{1em}} % Add a gap in the Contents, for aesthetics
+
+I would like to express my thanks to the people who have helped me most throughout my project.
+
+I am grateful to my mentor and guide Dr. Sudipta Roy for nonstop support for the project.
+
+A special thank of mine goes to my friends who helped me out in completing the project, where they all exchanged their own interesting ideas, thoughts and made this possible to complete my project with all accurate information. I wish to thank my parents for their personal support or attention who inspired me to go my own way.
+}
+\clearpage % Start a new page
+
+%----------------------------------------------------------------------------------------
+%	LIST OF CONTENTS/FIGURES/TABLES PAGES
+%----------------------------------------------------------------------------------------
+
+\pagestyle{fancy} % The page style headers have been "empty" all this time, now use the "fancy" headers as defined before to bring them back
+
+\lhead{\emph{Contents}} % Set the left side page header to "Contents"
+\tableofcontents % Write out the Table of Contents
+
+\lhead{\emph{List of Figures}} % Set the left side page header to "List of Figures"
+\listoffigures % Write out the List of Figures
+
+\lhead{\emph{List of Tables}} % Set the left side page header to "List of Tables"
+\listoftables % Write out the List of Tables
+
+%----------------------------------------------------------------------------------------
+%	ABBREVIATIONS
+%----------------------------------------------------------------------------------------
+
+\clearpage % Start a new page
+
+%\setstretch{1.5} % Set the line spacing to 1.5, this makes the following tables easier to read
+%\vspace{0.5cm}
+\lhead{\emph{Abbreviations}} % Set the left side page header to "Abbreviations"
+\listofsymbols{ll} % Include a list of Abbreviations (a table of two columns)
+{
+\textbf{MRI} & \textbf{M}agnetic \textbf{R}esonance \textbf{I}mage \\
+\textbf{CT} & \textbf{C}omputed \textbf{T}omography
+\\
+\textbf{EM} & \textbf{E}lectro \textbf{M}agnetic
+\\
+\textbf{MSER} & \textbf{M}aximally \textbf{S}table \textbf{E}xtremal \textbf{R}egions
+\\
+\textbf{FLAIR} & \textbf{F}luid \textbf{A}ttenuated \textbf{I}nversion \textbf{R}ecovery
+\\
+\textbf{DNN} & \textbf{D}eep \textbf{N}eural \textbf{N}etwork
+\\
+\textbf{CT} & \textbf{C}omputed \textbf{T}omography
+\\
+\textbf{CNN} & \textbf{C}onvolution \textbf{N}eural \textbf{N}etwork
+\\
+\textbf{PET} & \textbf{P}osition \textbf{E}mission \textbf{T}omography
+\\
+\textbf{MSE} & \textbf{M}ean \textbf{S}quared \textbf{E}rror
+\\
+\textbf{KNN} & \textbf{K} \textbf{N}earest \textbf{N}eighbors
+\\
+\textbf{ANN} & \textbf{A}rtificial \textbf{N}eural \textbf{N}etwork
+\\
+\textbf{GUI} & \textbf{G}raphic \textbf{U}ser \textbf{I}nterface
+\\
+\textbf{GLCM} & \textbf{G}ray \textbf{L}evel \textbf{C}o-occurrence \textbf{M}atrix
+\\
+\textbf{MLP} & \textbf{M}ulti \textbf{L}ayer
+\textbf{P}erceptron
+\\
+\textbf{SVM}  &  \textbf{S}upport  \textbf{V}ector \textbf{M}achine
+ \\
+ \textbf{PNN}  &  \textbf{P}robablistic  \textbf{N}eural \textbf{N}etwork
+\\
+ \textbf{LM}  &  \textbf{L}evenberg  \textbf{M}arquart
+\\
+ \textbf{TP}  &  \textbf{T}rue  \textbf{P}ositive
+\\
+ \textbf{TN}  &  \textbf{T}rue  \textbf{N}egative
+\\
+ \textbf{FP}  &  \textbf{F}alse  \textbf{P}ositive
+\\
+ \textbf{FN}  &  \textbf{F}alse   \textbf{N}egative
+\\
+\textbf{PCA} & \textbf{P}rincipal \textbf{C}omponent \textbf{A}nalysis} \\
+%\textbf{Acronym} & \textbf{W}hat (it) \textbf{S}tands \textbf{F}or \\
+}
+
+%----------------------------------------------------------------------------------------
+%	PHYSICAL CONSTANTS/OTHER DEFINITIONS
+%----------------------------------------------------------------------------------------
+
+%\clearpage % Start a new page
+
+%\lhead{\emph{Physical Constants}} % Set the left side page header to "Physical Constants"
+
+%\listofconstants{lrcl} % Include a list of Physical Constants (a four column table)
+%{
+%Speed of Light & $c$ & $=$ & $2.997\ 924\ 58\times10^{8}\ \mbox{ms}^{-\mbox{s}}$ (exact)\\
+
+%% Constant Name & Symbol & = & Constant Value (with units) \\
+%}
+
+%----------------------------------------------------------------------------------------
+%	SYMBOLS
+%----------------------------------------------------------------------------------------
+
+\clearpage % Start a new page
+
+%\lhead{\emph{Symbols}} % Set the left side page header to "Symbols"
+
+%\listofnomenclature{lll} % Include a list of Symbols (a three column table)
+%{
+%$a$ & distance & m \\
+%$P$ & power & W (Js$^{-1}$) \\
+%% Symbol & Name & Unit \\
+
+%& & \\ % Gap to separate the Roman symbols from the Greek
+
+%$\omega$ & angular frequency & rads$^{-1}$ \\
+% Symbol & Name & Unit \\
+%}
+
+%----------------------------------------------------------------------------------------
+%	DEDICATION
+%----------------------------------------------------------------------------------------
+
+\setstretch{1.3} % Return the line spacing back to 1.3
+
+\pagestyle{empty} % Page style needs to be empty for this page
+
+%\dedicatory{For/Dedicated to/To my\ldots} % Dedication text
+
+\addtocontents{toc}{\vspace{2em}} % Add a gap in the Contents, for aesthetics
+
+%----------------------------------------------------------------------------------------
+%	THESIS CONTENT - CHAPTERS
+%----------------------------------------------------------------------------------------
+
+\mainmatter % Begin numeric (1,2,3...) page numbering
+
+\pagestyle{fancy} % Return the page headers back to the "fancy" style
+
+% Include the chapters of the thesis as separate files from the Chapters folder
+% Uncomment the lines as you write the chapters
+
+\input{Chapters/Chapter1}
+\input{Chapters/Chapter7}
+\input{Chapters/Chapter2} 
+\input{Chapters/Chapter3}
+\input{Chapters/Chapter4} 
+\input{Chapters/Chapter5} 
+\input{Chapters/Chapter6} 
+%\input{Chapters/Chapter7} 
+
+%----------------------------------------------------------------------------------------
+%	THESIS CONTENT - APPENDICES
+%----------------------------------------------------------------------------------------
+
+\addtocontents{toc}{\vspace{2em}} % Add a gap in the Contents, for aesthetics
+
+\appendix % Cue to tell LaTeX that the following 'chapters' are Appendices
+
+% Include the appendices of the thesis as separate files from the Appendices folder
+% Uncomment the lines as you write the Appendices
+
+%\input{Appendices/AppendixA}
+%\input{Appendices/AppendixB}
+%\input{Appendices/AppendixC}
+
+\addtocontents{toc}{\vspace{2em}} % Add a gap in the Contents, for aesthetics
+
+\backmatter
+
+%----------------------------------------------------------------------------------------
+%	BIBLIOGRAPHY
+%----------------------------------------------------------------------------------------
+
+\label{Bibliography}
+
+% \bibliography{References}
+%\addcontentsline{toc}{chapter}{\large{Bibliography}}
+\begin{thebibliography}{99}
+
+\bibitem{ref1}Binu Thomas and P K Nizar Banu, "Brain tumor segmentation and detection using MRI images" ,International Journal of Mechanical Engineering and Technology (IJMET) Volume 9, Issue 5, May 2018.
+
+\bibitem{ref2}Hussna Elnoor Mohammed Abdalla and M. Y. Esmail,"Brain Tumor Detection by using Artificial Neural Network ",  International Conference on Computer, Control, Electrical, and Electronics Engineering (ICCCEEE),2018.
+
+\bibitem{ref3}Hao Dong ,Guang Yang, Fangde Liu, Yuanhan Mo, Yike Guo ,"  Automatic Brain Tumor Detection and Segmentation Using U-Net Based Fully Convolutional Networks", IJRET: International Journal of Research in Engineering and Technology, eISSN: 2319-1163 | pISSN: 2321-7308 , 2015.
+
+\bibitem{ref4}Shubhangi S. Veer and Pradeep M. Patil,"Brain tumor classification using Artificial neural network on MRI images",International Journal of Advanced Research in  Electrical, Electronics and Instrumentation Engineering, ISSN (Print)  : 2320 – 3765,ISSN (Online): 2278 – 8875,Vol. 3, Issue 9, September 2014.
+
+\bibitem{ref5}Aqhsa Q. Syed and K. Narayanan."Detection of Tumor in MRI Images Using Artificial Neural Networks",IJCSI International Journal of Computer Science Issues, Vol. 9, Issue 3, No 3, May 2012,ISSN (Online): 1694-0814 .
+
+\bibitem{ref6}Nitish Zulpe and Vrushsen Pawar
+,"GLCM Textural Features for Brain Tumor Classification",IJCSI International Journal of Computer Science Issues, Vol. 9, Issue 3, No 3, May 2012,ISSN (Online): 1694-0814.
+
+\end{thebibliography}
+
+
+\end{document}

@@ -1,0 +1,77 @@
+% Chapter 3
+
+\chapter{Literature Survey} % Main chapter title
+
+\label{Chapter3} % For referencing the chapter elsewhere, use \ref{Chapter3} 
+
+\lhead{Chapter 3. \emph{ Literature Survey }} % This is for the header on each page - perhaps a shortened title
+
+%-----------------------------------------------------------------
+
+  \section{Bina Thomas and P K Nizar Banu \cite{ref1}}
+  
+  Bina Thomas and P K Nizar Banu,  in 2018 They used two image processing techniques  Median Filter and Gaussian Filter. Median filter is used to remove noise from an image and Gaussian Filter is used for blurring the image and sharpening the image.And this paper used different segmentation methods Watershed Segmentation and Gray level threshold segmentation and Canny edge detection and they used KNN(K nearest neighbors) algorithm they got the accuracy of 92.35\%.
+  
+  \section{Hussna Elnoor Mohammed Abdalla and M Y Esmail \cite{ref2}}
+  
+  Hussna Elnoor Mohammed Abdalla and M Y Esmail[2] in 2018 in this paper used Theshold segmentation by applied mean gray level method and  Morphological  operation and for classification they used Artificial Neural Network(ANN) and they got the best result with auccuracy 99\% and all result of this study step by step were presented in Graphic User Interface(GUI).
+  
+  \section{Hao Dong and  et al. \cite{ref3}}
+  
+  Hao Dong et al.[3] in 2017  in this paper they used U-net based deep neural networks and it is solving the brain tumor segmentation problem.The proposed method makes it possible to generate a patient-specific brain tumor segmentation model without manual interference, and this potentially enables objective lesion assessment for clinical tasks such as diagnosis, treatment planning and patient monitoring. In this paper FCN gives faster result(detect normal and abnormal tissues)
+  
+  \section{ Shubhangi S.Veer et al. \cite{ref4}}
+  
+   Shubhangi S.Veer et al.[4] in 2015 in this paper for Image processing they used the Median Filter and for feature extraction used Wavelet transformation and used different classifier that is MLP(Multi-Layer Parception),PCA(Principal Component Analysis),SVM(Support Vector Machine),PNN(Probablistic Neural Network).Among all the classifier MLP gives highest accuracy of 99\%.
+   
+   \section{Aqhsa Q.Syed and et al \cite{ref5}}
+   
+   Aqhsa Q.Syed et al.[5] in 2014 in this paper they used  used   Water-shed operation and Thresholding Segmentaion for segmenting tumor region and used MLP classification. It segments the tumor region  from the    Input    image and Multi-Layer Perception   Neural Network  is  used  to detect the image as Normal  Image for Normal  Brain  MRI input.
+
+ 
+   \section{Nitish Zulpe and et al \cite{ref6}}
+   
+   Nitish Zulpe et al.[6] in 2012 in this paper they used GLCM for feature extraction and applied two layered feed forward Neural Network. This paper classify the 4 different classes of tumor i.e Astrocytoma, Meningioma, Sarcoma, Malastatic bron chogenic carcimoma. All the MRI slices collected from the WBA and after preprocessing the GLCM textural features used to train the feed forward neural network with Levenberg Marquart (LM) nonlinear optimization algorithm which gives the better recognition rate of 97.5\%. And this work will assist the physician to make the final decision for the further treatment.
+  
+
+\section{Comprehensive View}
+\begin{table}[h!]
+   \centering
+    \begin{tabular}{|l|p{3cm}|p{3cm}|p{3cm}|p{3cm}|}
+         \hline
+        
+    \textbf{YEAR} & \textbf{PAPER} &  \textbf{AUTHORS} &  \textbf{PROPOSED MODEL} & \textbf{ACCURACY RATE}\\
+        
+      \hline
+      
+     2018 & Brain Tumor Segmentation and Detection using MRI images & Bina Thomas and P K Nizar Banu  & Image Processing- Median Filter, Gaussian Filter Segmentation Method- Watershed Segmentation and Gray level threshold segmentation and Canny Edge Detection Classifier- Use KNN classification & 92.35\%  \\
+
+    \hline
+    
+    2018 & Brain tumor Detection by using Artificial Neural Network(ANN) &  Hussna Elnoor Mohammed Abdalla and M Y Esmail  & This paper use theshold segmentation by applied mean gray level method and Morphological operation and for classification they used ANN  &    99\% \\
+
+   \hline
+   
+   2017  & Automatic Brain tumor Detection and Segmentation using U-Net Based fully Convolutional Networks & Hao Dong et al. & Ihis paper used U-net based deep neural networks and it is solving the brain tumor segmentation problem & FCN gives faster result(detect normal and abnormal tissues)\\
+   
+   \hline
+   
+   2015  & Brain tumor Classifiication using Artificial Neural Network on MRI images & Shubhangi S.Veer and Pradeep M.Patil & For Image Processing they used  Median Filter for  Feature extraction-Wavelet transformation is been used and for  classification they used MLP,PCA,SVM,PNN & Among all the classifier MLP give highest accuracy of 99\% \\
+        
+  \hline
+   
+   2014  & Detection of Tumor in MRI images using Artificial Neural Network & Aqhsa Q.Syed and K. Narayanan & In this paper they used Watershed operation and Thresholding Segmentaion for segmenting tumor region and used MLP classification &  It segments the tumor region from the Input image and Multi-Layer Perception Neural Network is used to detect the image as Normal Image for Normal Brain MRI input \\
+
+  \hline
+ 
+  
+  
+  2012  & GLCM Textural Features for Brain Tumor Classification & Nitish Zulpe and Vrushsen Pawar & They used GLCM for feature extraction and applied to two layered Feed forward Neural Network   &   97.5\% \\
+  
+  \hline
+  
+  
+   \end{tabular}
+    \caption{Comprehensive View of Literature Survey}
+    \label{tab:my_label}
+ \end{table}
